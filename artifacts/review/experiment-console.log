@@ -1,0 +1,140 @@
+Matplotlib created a temporary cache directory at /var/folders/qk/j84q_vq957d_fq_5j1h03hyh0000gn/T/matplotlib-z5993jqm because the default path (/Users/akla1-4/.matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+2026-10-26 21:24:57.080 system_profiler[57487:899958] XType: Using static font registry.
+Matplotlib is building the font cache; this may take a moment.
+{
+  "method": "retrospective analysis; error discovery, not human correction",
+  "random_trials": 1000,
+  "random_seed": 2026,
+  "budgets": [
+    5,
+    10,
+    20,
+    40,
+    80
+  ],
+  "scenes": {
+    "clean": {
+      "samples": 270,
+      "errors": 3,
+      "rows": [
+        {
+          "budget": 5,
+          "priority_errors": 1,
+          "random_mean": 0.04,
+          "random_p05": 0.0,
+          "random_p95": 0.0
+        },
+        {
+          "budget": 10,
+          "priority_errors": 1,
+          "random_mean": 0.102,
+          "random_p05": 0.0,
+          "random_p95": 1.0
+        },
+        {
+          "budget": 20,
+          "priority_errors": 2,
+          "random_mean": 0.206,
+          "random_p05": 0.0,
+          "random_p95": 1.0
+        },
+        {
+          "budget": 40,
+          "priority_errors": 2,
+          "random_mean": 0.409,
+          "random_p05": 0.0,
+          "random_p95": 1.0
+        },
+        {
+          "budget": 80,
+          "priority_errors": 3,
+          "random_mean": 0.892,
+          "random_p05": 0.0,
+          "random_p95": 2.0
+        }
+      ]
+    },
+    "noise_025": {
+      "samples": 270,
+      "errors": 33,
+      "rows": [
+        {
+          "budget": 5,
+          "priority_errors": 2,
+          "random_mean": 0.624,
+          "random_p05": 0.0,
+          "random_p95": 2.0
+        },
+        {
+          "budget": 10,
+          "priority_errors": 5,
+          "random_mean": 1.238,
+          "random_p05": 0.0,
+          "random_p95": 3.0
+        },
+        {
+          "budget": 20,
+          "priority_errors": 14,
+          "random_mean": 2.476,
+          "random_p05": 0.9500000000000028,
+          "random_p95": 5.0
+        },
+        {
+          "budget": 40,
+          "priority_errors": 22,
+          "random_mean": 4.954,
+          "random_p05": 2.0,
+          "random_p95": 8.0
+        },
+        {
+          "budget": 80,
+          "priority_errors": 31,
+          "random_mean": 9.802,
+          "random_p05": 6.0,
+          "random_p95": 14.0
+        }
+      ]
+    },
+    "brightness_05": {
+      "samples": 270,
+      "errors": 70,
+      "rows": [
+        {
+          "budget": 5,
+          "priority_errors": 3,
+          "random_mean": 1.309,
+          "random_p05": 0.0,
+          "random_p95": 3.0
+        },
+        {
+          "budget": 10,
+          "priority_errors": 7,
+          "random_mean": 2.574,
+          "random_p05": 1.0,
+          "random_p95": 5.0
+        },
+        {
+          "budget": 20,
+          "priority_errors": 16,
+          "random_mean": 5.106,
+          "random_p05": 2.0,
+          "random_p95": 8.0
+        },
+        {
+          "budget": 40,
+          "priority_errors": 25,
+          "random_mean": 10.283,
+          "random_p05": 6.0,
+          "random_p95": 14.0
+        },
+        {
+          "budget": 80,
+          "priority_errors": 44,
+          "random_mean": 20.679,
+          "random_p05": 15.0,
+          "random_p95": 26.0
+        }
+      ]
+    }
+  }
+}

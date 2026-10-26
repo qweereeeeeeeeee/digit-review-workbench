@@ -1,0 +1,43 @@
+{
+  "page_errors": [],
+  "mobile_horizontal_overflow": false,
+  "events": [
+    {
+      "seconds": 12.67,
+      "action": "首页：展示真实实验指标"
+    },
+    {
+      "seconds": 17.83,
+      "action": "识别实验室：加载真实测试样本"
+    },
+    {
+      "seconds": 20.01,
+      "action": "真实样本 1：模型预测、置信度及遮挡分析"
+    },
+    {
+      "seconds": 24.2,
+      "action": "真实样本 2：模型预测、置信度及遮挡分析"
+    },
+    {
+      "seconds": 28.41,
+      "action": "真实样本 3：模型预测、置信度及遮挡分析"
+    },
+    {
+      "seconds": 32.78,
+      "action": "空白输入：实际 422 错误反馈"
+    },
+    {
+      "seconds": 37.03,
+      "action": "新手绘数字：真实推理，不预设正确结果"
+    },
+    {
+      "seconds": 42.08,
+      "action": "实际训练曲线、可靠性及压力测试"
+    },
+    {
+      "seconds": 48.23,
+      "action": "混淆矩阵、数据分布与适用边界"
+    }
+  ],
+  "recording": "Actual headless Chrome screenshots sampled at 5fps; no audio; wall time may differ slightly from encoded time"
+}

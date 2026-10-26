@@ -1,0 +1,13 @@
+{
+  "temperature": 1.2170035136705908,
+  "threshold": 0.9827145278453827,
+  "target_coverage": 0.9,
+  "fitted_on": "calibration",
+  "temperature_grid": [
+    0.25,
+    4,
+    241
+  ],
+  "calibration_nll_before": 0.07331356406211853,
+  "calibration_nll_after": 0.06974047422409058
+}

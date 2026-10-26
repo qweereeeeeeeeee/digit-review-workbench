@@ -1,0 +1,16 @@
+{
+  "status": "verified",
+  "test_samples": 270,
+  "correct": 267,
+  "metrics_recomputed": {
+    "n": 270,
+    "accuracy": 0.9888888888888889,
+    "macro_f1": 0.9888761517466464,
+    "nll": 0.051102074982478395,
+    "ece": 0.010704737129034775,
+    "coverage": 0.9259259259259259,
+    "accepted_count": 250,
+    "accepted_accuracy": 0.996
+  },
+  "model_sha256": "b61fc5a50dd24098786e86bb9c83c874ce1ef77d9f0a8e026c75a0905f93c1c6"
+}

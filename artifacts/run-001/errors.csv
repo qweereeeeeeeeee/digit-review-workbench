@@ -1,0 +1,4 @@
+sample_id,true_label,prediction,confidence,accepted,correct
+129,8,1,0.9473273,False,False
+5,5,9,0.9942016,True,False
+555,9,3,0.8226483,False,False

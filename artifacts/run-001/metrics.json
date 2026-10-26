@@ -1,0 +1,82 @@
+{
+  "started_utc": "2026-10-26T11:51:05.270199+00:00",
+  "finished_utc": "2026-10-26T11:51:25.419368+00:00",
+  "duration_seconds": 20.149250267000753,
+  "best_epoch": 22,
+  "parameter_count": 174970,
+  "splits": {
+    "train": 988,
+    "validation": 269,
+    "calibration": 270,
+    "test": 270
+  },
+  "test_raw": {
+    "n": 270,
+    "accuracy": 0.9888888888888889,
+    "macro_f1": 0.9888761517466464,
+    "nll": 0.05393752289313713,
+    "ece": 0.012282272069542495,
+    "coverage": 0.9481481481481482,
+    "accepted_count": 256,
+    "accepted_accuracy": 0.99609375
+  },
+  "test_calibrated": {
+    "n": 270,
+    "accuracy": 0.9888888888888889,
+    "macro_f1": 0.9888761517466464,
+    "nll": 0.05110206228343474,
+    "ece": 0.0107047354733502,
+    "coverage": 0.9259259259259259,
+    "accepted_count": 250,
+    "accepted_accuracy": 0.996,
+    "accuracy_95pct_wilson": [
+      0.9678467469452553,
+      0.9962142284507401
+    ]
+  },
+  "baseline_logistic": {
+    "n": 270,
+    "accuracy": 0.9481481481481482,
+    "macro_f1": 0.9475761631887313,
+    "nll": 0.20304240055584397,
+    "ece": 0.07343164351528601,
+    "coverage": 1.0,
+    "accepted_count": 270,
+    "accepted_accuracy": 0.9481481481481482
+  },
+  "robustness": {
+    "noise_sigma_0_25": {
+      "n": 270,
+      "accuracy": 0.8777777777777778,
+      "macro_f1": 0.8791592717829166,
+      "nll": 0.33717034348636415,
+      "ece": 0.04124856215936168,
+      "coverage": 0.5,
+      "accepted_count": 135,
+      "accepted_accuracy": 1.0
+    },
+    "brightness_0_5": {
+      "n": 270,
+      "accuracy": 0.7407407407407407,
+      "macro_f1": 0.7211622761520438,
+      "nll": 0.7764464121118707,
+      "ece": 0.062218751068468484,
+      "coverage": 0.1925925925925926,
+      "accepted_count": 52,
+      "accepted_accuracy": 1.0
+    },
+    "center_occlusion": {
+      "n": 270,
+      "accuracy": 0.774074074074074,
+      "macro_f1": 0.7252727044257157,
+      "nll": 1.0131139475059794,
+      "ece": 0.14325244956546362,
+      "coverage": 0.5555555555555556,
+      "accepted_count": 150,
+      "accepted_accuracy": 0.9466666666666667
+    }
+  },
+  "model_sha256": "b61fc5a50dd24098786e86bb9c83c874ce1ef77d9f0a8e026c75a0905f93c1c6",
+  "temperature": 1.2170035136705908,
+  "threshold": 0.9827145278453827
+}
