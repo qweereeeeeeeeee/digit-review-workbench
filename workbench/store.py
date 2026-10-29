@@ -34,6 +34,8 @@ class Store:
                     status TEXT NOT NULL DEFAULT 'pending' CHECK(status IN ('pending','confirmed','corrected','unreadable')),
                     version INTEGER NOT NULL DEFAULT 0, created_at TEXT NOT NULL,
                     UNIQUE(batch_id,digest));
+                CREATE TABLE IF NOT EXISTS originals(
+                    item_id TEXT PRIMARY KEY REFERENCES items(id), encoded TEXT NOT NULL);
                 CREATE TABLE IF NOT EXISTS events(
                     id INTEGER PRIMARY KEY AUTOINCREMENT, item_id TEXT NOT NULL REFERENCES items(id),
                     action TEXT NOT NULL, before_state TEXT NOT NULL, after_state TEXT NOT NULL,
@@ -92,6 +94,8 @@ class Store:
                     (id,batch_id,name,digest,pixels,prediction,confidence,probabilities,model_sha,preprocess,created_at)
                     VALUES(?,?,?,?,?,?,?,?,?,?,?)''',values)
                 inserted += cur.rowcount
+                if cur.rowcount and item.get('source_image'):
+                    db.execute('INSERT INTO originals VALUES(?,?)',(values[0],item['source_image']))
             result = dict(id=batch_id,inserted=inserted,duplicates=len(items)-inserted)
             db.execute('INSERT INTO requests VALUES(?,?,?)',(key,fingerprint,json.dumps(result)))
             return result
@@ -106,7 +110,7 @@ class Store:
     def items(self, batch_id, status='all', order='uncertain', limit=100, offset=0):
         where = 'batch_id=?'; args = [batch_id]
         if status != 'all': where += ' AND status=?'; args.append(status)
-        ordering = 'confidence ASC,id' if order == 'uncertain' else 'created_at ASC,name,id'
+        ordering = 'confidence ASC,id' if order == 'uncertain' else 'rowid ASC'
         with self.connect() as db:
             if not db.execute('SELECT id FROM batches WHERE id=?',(batch_id,)).fetchone(): raise KeyError('批次不存在')
             total = db.execute(f'SELECT COUNT(*) FROM items WHERE {where}',args).fetchone()[0]
@@ -116,6 +120,8 @@ class Store:
     def get(self, item_id):
         with self.connect() as db:
             obj = self.decode(db.execute('SELECT * FROM items WHERE id=?',(item_id,)).fetchone())
+            original = db.execute('SELECT encoded FROM originals WHERE item_id=?',(item_id,)).fetchone()
+            obj['source_image'] = original['encoded'] if original else None
             obj['events'] = [dict(r) for r in db.execute('SELECT * FROM events WHERE item_id=? ORDER BY id',(item_id,))]
             return obj
 

@@ -33,7 +33,9 @@ class Engine:
         results=[]
         for entry,p in zip(entries,probs):
             pixels=np.asarray(entry['pixels'],dtype='<f4')
-            results.append(dict(**entry,digest=hashlib.sha256(pixels.tobytes()).hexdigest(),
+            # Uploaded originals define identity: different originals may collapse to the same 8x8 input.
+            identity=base64.b64decode(entry['source_image']) if entry.get('source_image') else pixels.tobytes()
+            results.append(dict(**entry,digest=hashlib.sha256(identity).hexdigest(),
                 prediction=int(p.argmax()),confidence=float(p.max()),probabilities=p.tolist(),model_sha=self.sha))
         return results
 

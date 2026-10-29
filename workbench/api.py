@@ -96,7 +96,7 @@ def create_app(db_path=None):
         for img in body.images:
             try:pixels=decode_image(img.data,body.polarity,body.normalize)
             except (ValueError,TypeError) as exc:raise HTTPException(422,f'{img.name}: {exc}') from exc
-            entries.append(dict(name=img.name,pixels=pixels,preprocess=f'polarity={body.polarity};center={body.normalize};box8'))
+            entries.append(dict(name=img.name,pixels=pixels,source_image=img.data,preprocess=f'polarity={body.polarity};center={body.normalize};box8'))
         predicted=app.state.engine.predict(entries)
         return app.state.store.create_batch(body.name,'用户图片',predicted,str(body.request_id))
 

@@ -104,3 +104,25 @@ def test_preprocessing_blank_and_polarity():
     a=decode_image(encode(x),'light',True)
     b=decode_image(encode(255-x),'dark',True)
     assert np.allclose(a,b)
+
+
+def test_originals_survive_downsampling_and_import_order(client):
+    # Different originals that quantize to the same model input must remain reviewable.
+    a=np.zeros((24,24),dtype=np.uint8);a[4:20,10:14]=255
+    b=a.copy();b[0,0]=1
+    def encode(arr):
+        out=io.BytesIO();Image.fromarray(arr).save(out,format='PNG')
+        return base64.b64encode(out.getvalue()).decode()
+    originals=[encode(a),encode(b)]
+    assert decode_image(originals[0],'light',False)==decode_image(originals[1],'light',False)
+    body={'request_id':request_id(),'name':'originals','images':[
+        {'name':name,'data':data} for name,data in zip(['z.png','a.png'],originals)]}
+    response=client.post('/api/batches/import',json=body)
+    assert response.status_code==200,response.text
+    assert response.json()['inserted']==2
+    batch=response.json()['id']
+    rows=client.get(f'/api/batches/{batch}/items?order=original').json()['items']
+    assert [r['name'] for r in rows]==['z.png','a.png']
+    reopened=Store(client.app.state.store.path)
+    assert [reopened.get(r['id'])['source_image'] for r in rows]==originals
+    assert all('source_image' not in r for r in rows) # Keep paginated lists small.
