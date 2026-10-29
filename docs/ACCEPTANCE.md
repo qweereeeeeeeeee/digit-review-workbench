@@ -1,21 +1,16 @@
-# 验收映射
+# 验收对应表
 
-| 考核项 | 实现证据 |
+| 要求 | 对应实现和证据 |
 |---|---|
-| 自主选题 | 墨鉴：带可靠性评估的手写数字识别 |
-| Python 函数/类/模块/文件/异常 | src/ 下模块，模型类，JSON/CSV 记录，输入校验和错误响应 |
-| 独立环境与依赖 | .venv、本项目 requirements.txt、实际环境锁文件 |
-| NumPy | 像素归一化、数据指纹、扰动、概率与指标计算 |
-| Pandas | 数据表、清洗核查、分类统计、训练与预测记录 |
-| Matplotlib | 分布、训练、混淆矩阵、可靠性与压力测试图 |
-| 手写 ResNet | src/model.py，六个残差块，维度变化时投影 shortcut |
-| PyTorch 流程 | DataLoader、交叉熵、AdamW、验证、保存/加载、推理 |
-| 新图片预测 | 浏览器绘制/上传，经实际后端模型推理；分布差异明示 |
-| 迁移学习理解 | REFERENCES.md，明确未使用预训练替代手写网络 |
-| 参考与创新 | 独立校准、拒识、遮挡敏感度、模型哈希及可追溯结果 |
-| 文档说明 | README、REPORT、REFERENCES、DEFENSE |
-| 个人感悟 | 需本人补写，不能由 AI 冒充经历 |
-| 运行视频 | 已录制 artifacts/demo/运行演示.mp4，实际浏览器画面，无音轨 |
-| 真实开发历史 | 本地分阶段 Git 提交，AI 身份标注；远程托管仍需实际完成 |
-| GitHub/Gitee 链接 | 尚未提供账户/仓库，不虚构地址 |
-| 提交给指定同学 | 最终由用户检查并实际提交 |
+| Python、NumPy、Pandas、Matplotlib | `src/` 的数据、训练、指标模块；`scripts/review_experiment.py` 的队列分析；CSV 与图表产物 |
+| 手写 ResNet、训练、保存、推理 | `src/model.py`、`src/train.py`；`artifacts/run-001/model.pt` 与每轮记录；`workbench/inference.py` |
+| 新图片预测 | 图片导入接口、可选预处理、原图与输入对照；仅支持单数字 |
+| 参考与拓展 | `docs/research/GITHUB_NOTES.md`；复核状态、重试、冲突、导出与固定预算队列实验 |
+| 仓库及依赖 | https://github.com/qweereeeeeeeeee/digit-review-workbench；`requirements.txt`、`requirements-lock.txt`、`requirements-demo.txt` |
+| 开发历史 | 本地历史保留；远程从调研起分阶段提交。第一版仅有本地历史，不冒充此前已远程持续提交 |
+| 项目说明 | `README.md`、`docs/PROJECT_REPORT.md`、原训练报告 `docs/REPORT.md` |
+| 个人感悟 | `docs/DEFENSE.md` 提供理解和动手检查问题；本人仍需基于实际经历补写 |
+| 运行视频 | `artifacts/review/demo/运行演示.mp4`，34.8 秒实际 Chrome 画面，自动化操作、无音轨 |
+| AI 辅助且理解代码 | AI 辅助明确披露；提交者仍需自行读懂、修改和排查，不能由自动测试替代 |
+
+测试日志和浏览器检查位于 `artifacts/review/`。截图来自项目运行，数字图片来自公开数据或用户上传；扰动场景明确标注为程序变换。
