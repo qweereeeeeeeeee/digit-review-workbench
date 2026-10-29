@@ -1,0 +1,49 @@
+{
+  "checked_at_utc": "2026-10-29T11:23:17.751517+00:00",
+  "status": "passed",
+  "checks": [
+    "1797 images and labels match installed public dataset; no duplicate images; four disjoint reproducible splits cover all samples",
+    "checkpoint fingerprint and parameter count match; all 270 predictions, labels, examples, acceptance flags and three errors recomputed",
+    "all 810 scene predictions and full queue curves match fresh inference and 1000 randomized permutations per scene",
+    "recorded CSV contains 270 unchanged model predictions and exactly one explicitly demonstrated correction, sample 555: 3 to 9",
+    "local SQLite integrity and foreign keys checked read-only"
+  ],
+  "samples": 1797,
+  "splits": {
+    "train": 988,
+    "validation": 269,
+    "calibration": 270,
+    "test": 270
+  },
+  "test_correct": 267,
+  "test_total": 270,
+  "error_sample_ids": [
+    129,
+    5,
+    555
+  ],
+  "budget_20": {
+    "clean": {
+      "total_errors": 3,
+      "priority_errors": 2,
+      "random_mean": 0.206
+    },
+    "noise_025": {
+      "total_errors": 33,
+      "priority_errors": 14,
+      "random_mean": 2.476
+    },
+    "brightness_05": {
+      "total_errors": 70,
+      "priority_errors": 16,
+      "random_mean": 5.106
+    }
+  },
+  "local_database": {
+    "batches": 2,
+    "items": 271,
+    "events": 1
+  },
+  "model_sha256": "b61fc5a50dd24098786e86bb9c83c874ce1ef77d9f0a8e026c75a0905f93c1c6",
+  "limits": "This checks consistency and reproducibility against the installed public dataset, not new handwriting performance or human review efficiency."
+}
