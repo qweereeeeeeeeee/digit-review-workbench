@@ -1,0 +1,51 @@
+{
+  "page_errors": [],
+  "mobile_horizontal_overflow": false,
+  "events": [
+    {
+      "wall_seconds": 0.0,
+      "action": "打开工作区"
+    },
+    {
+      "wall_seconds": 2.26,
+      "action": "载入公开测试集 270 张，按置信度从低到高排序"
+    },
+    {
+      "wall_seconds": 6.29,
+      "action": "查看图片和模型预测"
+    },
+    {
+      "wall_seconds": 11.59,
+      "action": "原预测为 3；根据已有真值演示纠正为 9"
+    },
+    {
+      "wall_seconds": 15.89,
+      "action": "查看署名、版本和修改记录；原预测仍保留"
+    },
+    {
+      "wall_seconds": 20.86,
+      "action": "刷新后仍能读取已保存标签"
+    },
+    {
+      "wall_seconds": 23.93,
+      "action": "导出本批次 CSV，未复核项的最终标签留空"
+    },
+    {
+      "wall_seconds": 26.99,
+      "action": "导入同一公开样本两次，验证文件去重"
+    },
+    {
+      "wall_seconds": 30.6,
+      "action": "一条记录；保留上传原图和模型实际输入"
+    },
+    {
+      "wall_seconds": 35.09,
+      "action": "回顾性队列实验及随机对照；不冒充人工提效测量"
+    }
+  ],
+  "recording": "Continuous Playwright Chromium video, automated demonstration; reviewer label 演示 is not a human identity. No audio, no mocked responses.",
+  "sample_source": "sklearn load_digits sample 0 rendered with nearest-neighbor scaling; review uses existing truth for sample 555; no new human labeling study.",
+  "video_seconds": 40.0,
+  "fps": 25.0,
+  "encoding_note": "Removed 88-pixel bottom encoder padding; no application content or responses replaced."
+}

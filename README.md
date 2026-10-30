@@ -4,7 +4,7 @@
 
 项目从分类演示改造而来。主要改进在处理流程：保存上传原图，区分模型预测与确认标签，处理重复请求和同时修改，检查复核顺序是否有用。没有新增算法的主张。
 
-![复核工作区](artifacts/review/demo/复核记录.png)
+![复核工作区](artifacts/review/demo-v2/复核记录.png)
 
 ## 启动
 
@@ -58,9 +58,9 @@ sh scripts/start.sh
 - [训练报告](docs/REPORT.md)：第一版训练与评估证据，保留原记录。
 - [验收对应表](docs/ACCEPTANCE.md)、[代码理解与个人感悟准备](docs/DEFENSE.md)。
 - [GitHub 调研笔记](docs/research/GITHUB_NOTES.md)、[队列实验协议](docs/research/REVIEW_PROTOCOL.md)、[参考与数据许可](docs/REFERENCES.md)。
-- [运行视频](artifacts/review/demo/运行演示.mp4)：实际 Chrome 页面录制，34.8 秒，无音轨，操作由自动化脚本执行。演示纠错依据已有公开标签，署名为“自动化录制（演示）”。
+- [运行视频](artifacts/review/demo-v2/运行演示.mp4)：连续展示检查、纠错、保存、导出和图片导入。[录制说明](docs/VIDEO.md)记录数据来源、操作方式和复录步骤。
 
-复录需要安装 `requirements-demo.txt`，启动服务后执行 `.venv/bin/python scripts/record_workbench.py`。默认使用 macOS Chrome，可用 `CHROME_PATH` 指定路径；录制会向当前数据库增加演示批次。
+复录需要安装 `requirements-demo.txt`，按录制说明启动独立演示服务后执行 `.venv/bin/python scripts/record_walkthrough.py`。默认使用 macOS Chrome，可用 `CHROME_PATH` 指定路径。旧录制及其校验材料保留在 `artifacts/review/demo/`。
 
 ## 开发记录
 

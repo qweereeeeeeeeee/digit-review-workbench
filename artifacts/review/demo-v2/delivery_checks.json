@@ -1,0 +1,15 @@
+{
+  "decoded_frames": 1000,
+  "csv_rows": 270,
+  "correction": {
+    "sample": 555,
+    "prediction": 3,
+    "final_label": 9
+  },
+  "frame_size": [
+    1440,
+    812
+  ],
+  "fps": 25.0,
+  "duration_seconds": 40.0
+}

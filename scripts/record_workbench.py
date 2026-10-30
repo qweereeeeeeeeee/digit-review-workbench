@@ -26,7 +26,7 @@ async def main():
         page=await browser.new_page(viewport={'width':1440,'height':1080},device_scale_factor=1)
         page.on('pageerror',lambda error:errors.append(str(error)))
         await page.goto('http://127.0.0.1:8766',wait_until='networkidle')
-        await page.wait_for_function("document.getElementById('connection').textContent.includes('已加载')")
+        await page.wait_for_function("document.getElementById('connection').textContent.includes('已就绪')")
         writer=imageio.get_writer(str(OUT/'运行演示.mp4'),fps=5,codec='libx264',quality=8,macro_block_size=2)
         start=time.monotonic();frames=0
         async def record():
