@@ -1,0 +1,400 @@
+{
+  "purpose": "Five public real photographs for smoke testing, not an accuracy benchmark",
+  "results": [
+    {
+      "name": "coffee",
+      "candidates": [
+        {
+          "class_id": 967,
+          "label": "espresso",
+          "display": "浓缩咖啡",
+          "score": 0.5437255501747131
+        },
+        {
+          "class_id": 968,
+          "label": "cup",
+          "display": "杯子",
+          "score": 0.01758706197142601
+        },
+        {
+          "class_id": 504,
+          "label": "coffee mug",
+          "display": "马克杯",
+          "score": 0.004023860674351454
+        },
+        {
+          "class_id": 925,
+          "label": "consomme",
+          "display": "consomme",
+          "score": 0.0021598152816295624
+        },
+        {
+          "class_id": 960,
+          "label": "chocolate sauce",
+          "display": "chocolate sauce",
+          "score": 0.0018604652723297477
+        }
+      ],
+      "whole_candidates": [
+        {
+          "class_id": 967,
+          "label": "espresso",
+          "display": "浓缩咖啡",
+          "score": 0.5145879983901978
+        },
+        {
+          "class_id": 968,
+          "label": "cup",
+          "display": "杯子",
+          "score": 0.02782413363456726
+        },
+        {
+          "class_id": 504,
+          "label": "coffee mug",
+          "display": "马克杯",
+          "score": 0.004437123890966177
+        },
+        {
+          "class_id": 868,
+          "label": "tray",
+          "display": "tray",
+          "score": 0.0033746922854334116
+        },
+        {
+          "class_id": 925,
+          "label": "consomme",
+          "display": "consomme",
+          "score": 0.0032805828377604485
+        }
+      ],
+      "views_agree": true,
+      "needs_review": false,
+      "review_reason": "两种取景首选一致，仍需核对原图",
+      "elapsed_ms": 284.2,
+      "model_sha": "11ad3fa62ca79e40addfd354a8ec4b7c75143b3038b8d2a807fbc68deab379ca",
+      "model": "ResNet50 / ImageNet-1K V2",
+      "crop": null,
+      "region_size": [
+        600,
+        400
+      ],
+      "scope": "1000 个预定义类别；得分不是正确率，类别外图片也可能得到高分"
+    },
+    {
+      "name": "chelsea",
+      "candidates": [
+        {
+          "class_id": 285,
+          "label": "Egyptian cat",
+          "display": "埃及猫",
+          "score": 0.34224531054496765
+        },
+        {
+          "class_id": 281,
+          "label": "tabby",
+          "display": "虎斑猫",
+          "score": 0.06097369268536568
+        },
+        {
+          "class_id": 282,
+          "label": "tiger cat",
+          "display": "虎斑猫",
+          "score": 0.04986977577209473
+        },
+        {
+          "class_id": 287,
+          "label": "lynx",
+          "display": "lynx",
+          "score": 0.006197220180183649
+        },
+        {
+          "class_id": 761,
+          "label": "remote control",
+          "display": "遥控器",
+          "score": 0.0017775519518181682
+        }
+      ],
+      "whole_candidates": [
+        {
+          "class_id": 285,
+          "label": "Egyptian cat",
+          "display": "埃及猫",
+          "score": 0.5006750822067261
+        },
+        {
+          "class_id": 281,
+          "label": "tabby",
+          "display": "虎斑猫",
+          "score": 0.034343160688877106
+        },
+        {
+          "class_id": 282,
+          "label": "tiger cat",
+          "display": "虎斑猫",
+          "score": 0.0303817018866539
+        },
+        {
+          "class_id": 287,
+          "label": "lynx",
+          "display": "lynx",
+          "score": 0.005729420110583305
+        },
+        {
+          "class_id": 793,
+          "label": "shower cap",
+          "display": "shower cap",
+          "score": 0.00171859550755471
+        }
+      ],
+      "views_agree": true,
+      "needs_review": true,
+      "review_reason": "首选得分低于提示阈值",
+      "elapsed_ms": 283.1,
+      "model_sha": "11ad3fa62ca79e40addfd354a8ec4b7c75143b3038b8d2a807fbc68deab379ca",
+      "model": "ResNet50 / ImageNet-1K V2",
+      "crop": null,
+      "region_size": [
+        451,
+        300
+      ],
+      "scope": "1000 个预定义类别；得分不是正确率，类别外图片也可能得到高分"
+    },
+    {
+      "name": "rocket",
+      "candidates": [
+        {
+          "class_id": 540,
+          "label": "drilling platform",
+          "display": "drilling platform",
+          "score": 0.1307176947593689
+        },
+        {
+          "class_id": 657,
+          "label": "missile",
+          "display": "导弹",
+          "score": 0.1225404217839241
+        },
+        {
+          "class_id": 744,
+          "label": "projectile",
+          "display": "projectile",
+          "score": 0.0829537957906723
+        },
+        {
+          "class_id": 517,
+          "label": "crane",
+          "display": "crane",
+          "score": 0.023535821586847305
+        },
+        {
+          "class_id": 812,
+          "label": "space shuttle",
+          "display": "航天飞机",
+          "score": 0.005229116417467594
+        }
+      ],
+      "whole_candidates": [
+        {
+          "class_id": 540,
+          "label": "drilling platform",
+          "display": "drilling platform",
+          "score": 0.33801084756851196
+        },
+        {
+          "class_id": 517,
+          "label": "crane",
+          "display": "crane",
+          "score": 0.09659932553768158
+        },
+        {
+          "class_id": 657,
+          "label": "missile",
+          "display": "导弹",
+          "score": 0.03591860085725784
+        },
+        {
+          "class_id": 744,
+          "label": "projectile",
+          "display": "projectile",
+          "score": 0.019497908651828766
+        },
+        {
+          "class_id": 536,
+          "label": "dock",
+          "display": "dock",
+          "score": 0.009819175116717815
+        }
+      ],
+      "views_agree": true,
+      "needs_review": true,
+      "review_reason": "首选得分低于提示阈值",
+      "elapsed_ms": 251.8,
+      "model_sha": "11ad3fa62ca79e40addfd354a8ec4b7c75143b3038b8d2a807fbc68deab379ca",
+      "model": "ResNet50 / ImageNet-1K V2",
+      "crop": null,
+      "region_size": [
+        640,
+        427
+      ],
+      "scope": "1000 个预定义类别；得分不是正确率，类别外图片也可能得到高分"
+    },
+    {
+      "name": "camera",
+      "candidates": [
+        {
+          "class_id": 872,
+          "label": "tripod",
+          "display": "tripod",
+          "score": 0.5476853847503662
+        },
+        {
+          "class_id": 447,
+          "label": "binoculars",
+          "display": "binoculars",
+          "score": 0.026700900867581367
+        },
+        {
+          "class_id": 759,
+          "label": "reflex camera",
+          "display": "单反相机",
+          "score": 0.009616482071578503
+        },
+        {
+          "class_id": 650,
+          "label": "microphone",
+          "display": "microphone",
+          "score": 0.004019558895379305
+        },
+        {
+          "class_id": 457,
+          "label": "bow tie",
+          "display": "bow tie",
+          "score": 0.003734033089131117
+        }
+      ],
+      "whole_candidates": [
+        {
+          "class_id": 872,
+          "label": "tripod",
+          "display": "tripod",
+          "score": 0.5308316349983215
+        },
+        {
+          "class_id": 447,
+          "label": "binoculars",
+          "display": "binoculars",
+          "score": 0.018575895577669144
+        },
+        {
+          "class_id": 759,
+          "label": "reflex camera",
+          "display": "单反相机",
+          "score": 0.01227881945669651
+        },
+        {
+          "class_id": 650,
+          "label": "microphone",
+          "display": "microphone",
+          "score": 0.004078464582562447
+        },
+        {
+          "class_id": 593,
+          "label": "harmonica",
+          "display": "harmonica",
+          "score": 0.003546282881870866
+        }
+      ],
+      "views_agree": true,
+      "needs_review": false,
+      "review_reason": "两种取景首选一致，仍需核对原图",
+      "elapsed_ms": 238.6,
+      "model_sha": "11ad3fa62ca79e40addfd354a8ec4b7c75143b3038b8d2a807fbc68deab379ca",
+      "model": "ResNet50 / ImageNet-1K V2",
+      "crop": null,
+      "region_size": [
+        512,
+        512
+      ],
+      "scope": "1000 个预定义类别；得分不是正确率，类别外图片也可能得到高分"
+    },
+    {
+      "name": "astronaut",
+      "candidates": [
+        {
+          "class_id": 518,
+          "label": "crash helmet",
+          "display": "crash helmet",
+          "score": 0.08802127093076706
+        },
+        {
+          "class_id": 560,
+          "label": "football helmet",
+          "display": "football helmet",
+          "score": 0.08605021983385086
+        },
+        {
+          "class_id": 812,
+          "label": "space shuttle",
+          "display": "航天飞机",
+          "score": 0.04247673600912094
+        },
+        {
+          "class_id": 678,
+          "label": "neck brace",
+          "display": "neck brace",
+          "score": 0.018741842359304428
+        },
+        {
+          "class_id": 830,
+          "label": "stretcher",
+          "display": "stretcher",
+          "score": 0.015641693025827408
+        }
+      ],
+      "whole_candidates": [
+        {
+          "class_id": 518,
+          "label": "crash helmet",
+          "display": "crash helmet",
+          "score": 0.08885490149259567
+        },
+        {
+          "class_id": 560,
+          "label": "football helmet",
+          "display": "football helmet",
+          "score": 0.08396903425455093
+        },
+        {
+          "class_id": 812,
+          "label": "space shuttle",
+          "display": "航天飞机",
+          "score": 0.05996467545628548
+        },
+        {
+          "class_id": 830,
+          "label": "stretcher",
+          "display": "stretcher",
+          "score": 0.015352501533925533
+        },
+        {
+          "class_id": 678,
+          "label": "neck brace",
+          "display": "neck brace",
+          "score": 0.011776125989854336
+        }
+      ],
+      "views_agree": true,
+      "needs_review": true,
+      "review_reason": "首选得分低于提示阈值",
+      "elapsed_ms": 243.5,
+      "model_sha": "11ad3fa62ca79e40addfd354a8ec4b7c75143b3038b8d2a807fbc68deab379ca",
+      "model": "ResNet50 / ImageNet-1K V2",
+      "crop": null,
+      "region_size": [
+        512,
+        512
+      ],
+      "scope": "1000 个预定义类别；得分不是正确率，类别外图片也可能得到高分"
+    }
+  ]
+}

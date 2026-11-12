@@ -1,0 +1,550 @@
+{
+  "purpose": "Real public photos, integration smoke test only. Not an independent accuracy benchmark.",
+  "results": [
+    {
+      "name": "astronaut",
+      "detection": {
+        "items": [
+          {
+            "label": "person",
+            "display": "人",
+            "class_id": 0,
+            "score": 0.9172782897949219,
+            "box": [
+              0.0290998462587595,
+              0.030213737860322,
+              0.7119870185852051,
+              0.998623251914978
+            ]
+          },
+          {
+            "label": "sports ball",
+            "display": "运动球",
+            "class_id": 32,
+            "score": 0.552566647529602,
+            "box": [
+              0.5371586084365845,
+              0.6710633039474487,
+              0.9900470972061157,
+              0.9996439814567566
+            ]
+          }
+        ],
+        "model": "Ultralytics YOLO11s / COCO",
+        "sha256": "85a76fe86dd8afe384648546b56a7a78580c7cb7b404fc595f97969322d502d5",
+        "threshold": 0.35,
+        "iou": 0.7,
+        "input_size": 640,
+        "elapsed_ms": 1899.2,
+        "scope": "80 类常见物体；框的位置和类别均可能出错。未检测到不代表图片没有物体。"
+      },
+      "candidates": [
+        {
+          "class_id": 518,
+          "label": "crash helmet",
+          "display": "crash helmet",
+          "score": 0.08802125602960587
+        },
+        {
+          "class_id": 560,
+          "label": "football helmet",
+          "display": "football helmet",
+          "score": 0.08605020493268967
+        },
+        {
+          "class_id": 812,
+          "label": "space shuttle",
+          "display": "航天飞机",
+          "score": 0.042476728558540344
+        },
+        {
+          "class_id": 678,
+          "label": "neck brace",
+          "display": "neck brace",
+          "score": 0.018741844221949577
+        },
+        {
+          "class_id": 830,
+          "label": "stretcher",
+          "display": "stretcher",
+          "score": 0.015641717240214348
+        }
+      ],
+      "whole_candidates": [
+        {
+          "class_id": 518,
+          "label": "crash helmet",
+          "display": "crash helmet",
+          "score": 0.08885489404201508
+        },
+        {
+          "class_id": 560,
+          "label": "football helmet",
+          "display": "football helmet",
+          "score": 0.08396893739700317
+        },
+        {
+          "class_id": 812,
+          "label": "space shuttle",
+          "display": "航天飞机",
+          "score": 0.05996475741267204
+        },
+        {
+          "class_id": 830,
+          "label": "stretcher",
+          "display": "stretcher",
+          "score": 0.015352502465248108
+        },
+        {
+          "class_id": 678,
+          "label": "neck brace",
+          "display": "neck brace",
+          "score": 0.011776135303080082
+        }
+      ],
+      "views_agree": true,
+      "needs_review": true,
+      "review_reason": "首选得分低于提示阈值",
+      "elapsed_ms": 2098.5,
+      "model_sha": "11ad3fa62ca79e40addfd354a8ec4b7c75143b3038b8d2a807fbc68deab379ca",
+      "model": "ResNet50 / ImageNet-1K V2",
+      "crop": null,
+      "region_size": [
+        512,
+        512
+      ],
+      "scope": "1000 个预定义类别；得分不是正确率，类别外图片也可能得到高分"
+    },
+    {
+      "name": "camera",
+      "detection": {
+        "items": [
+          {
+            "label": "person",
+            "display": "人",
+            "class_id": 0,
+            "score": 0.9239338636398315,
+            "box": [
+              0.0013249397743493319,
+              0.1244996041059494,
+              0.6517112851142883,
+              0.9969359636306763
+            ]
+          },
+          {
+            "label": "boat",
+            "display": "船",
+            "class_id": 8,
+            "score": 0.3817156255245209,
+            "box": [
+              0.6216875314712524,
+              0.44827231764793396,
+              0.6695717573165894,
+              0.47308674454689026
+            ]
+          }
+        ],
+        "model": "Ultralytics YOLO11s / COCO",
+        "sha256": "85a76fe86dd8afe384648546b56a7a78580c7cb7b404fc595f97969322d502d5",
+        "threshold": 0.35,
+        "iou": 0.7,
+        "input_size": 640,
+        "elapsed_ms": 310.5,
+        "scope": "80 类常见物体；框的位置和类别均可能出错。未检测到不代表图片没有物体。"
+      },
+      "candidates": [
+        {
+          "class_id": 872,
+          "label": "tripod",
+          "display": "tripod",
+          "score": 0.5476853251457214
+        },
+        {
+          "class_id": 447,
+          "label": "binoculars",
+          "display": "binoculars",
+          "score": 0.026700910180807114
+        },
+        {
+          "class_id": 759,
+          "label": "reflex camera",
+          "display": "单反相机",
+          "score": 0.009616485796868801
+        },
+        {
+          "class_id": 650,
+          "label": "microphone",
+          "display": "microphone",
+          "score": 0.004019560292363167
+        },
+        {
+          "class_id": 457,
+          "label": "bow tie",
+          "display": "bow tie",
+          "score": 0.003734034486114979
+        }
+      ],
+      "whole_candidates": [
+        {
+          "class_id": 872,
+          "label": "tripod",
+          "display": "tripod",
+          "score": 0.5308319330215454
+        },
+        {
+          "class_id": 447,
+          "label": "binoculars",
+          "display": "binoculars",
+          "score": 0.018575891852378845
+        },
+        {
+          "class_id": 759,
+          "label": "reflex camera",
+          "display": "单反相机",
+          "score": 0.012278814800083637
+        },
+        {
+          "class_id": 650,
+          "label": "microphone",
+          "display": "microphone",
+          "score": 0.004078462719917297
+        },
+        {
+          "class_id": 593,
+          "label": "harmonica",
+          "display": "harmonica",
+          "score": 0.0035462796222418547
+        }
+      ],
+      "views_agree": true,
+      "needs_review": false,
+      "review_reason": "两种取景首选一致，仍需核对原图",
+      "elapsed_ms": 480.3,
+      "model_sha": "11ad3fa62ca79e40addfd354a8ec4b7c75143b3038b8d2a807fbc68deab379ca",
+      "model": "ResNet50 / ImageNet-1K V2",
+      "crop": null,
+      "region_size": [
+        512,
+        512
+      ],
+      "scope": "1000 个预定义类别；得分不是正确率，类别外图片也可能得到高分"
+    },
+    {
+      "name": "chelsea",
+      "detection": {
+        "items": [
+          {
+            "label": "cat",
+            "display": "猫",
+            "class_id": 15,
+            "score": 0.9153161644935608,
+            "box": [
+              0.001506233294628676,
+              0.002421073118845622,
+              0.8840490370790605,
+              0.9869963582356771
+            ]
+          }
+        ],
+        "model": "Ultralytics YOLO11s / COCO",
+        "sha256": "85a76fe86dd8afe384648546b56a7a78580c7cb7b404fc595f97969322d502d5",
+        "threshold": 0.35,
+        "iou": 0.7,
+        "input_size": 640,
+        "elapsed_ms": 222.3,
+        "scope": "80 类常见物体；框的位置和类别均可能出错。未检测到不代表图片没有物体。"
+      },
+      "candidates": [
+        {
+          "class_id": 285,
+          "label": "Egyptian cat",
+          "display": "埃及猫",
+          "score": 0.3422454595565796
+        },
+        {
+          "class_id": 281,
+          "label": "tabby",
+          "display": "虎斑猫",
+          "score": 0.060973722487688065
+        },
+        {
+          "class_id": 282,
+          "label": "tiger cat",
+          "display": "虎斑猫",
+          "score": 0.04986970126628876
+        },
+        {
+          "class_id": 287,
+          "label": "lynx",
+          "display": "lynx",
+          "score": 0.006197219714522362
+        },
+        {
+          "class_id": 761,
+          "label": "remote control",
+          "display": "遥控器",
+          "score": 0.0017775518354028463
+        }
+      ],
+      "whole_candidates": [
+        {
+          "class_id": 285,
+          "label": "Egyptian cat",
+          "display": "埃及猫",
+          "score": 0.5006752610206604
+        },
+        {
+          "class_id": 281,
+          "label": "tabby",
+          "display": "虎斑猫",
+          "score": 0.03434315696358681
+        },
+        {
+          "class_id": 282,
+          "label": "tiger cat",
+          "display": "虎斑猫",
+          "score": 0.0303816981613636
+        },
+        {
+          "class_id": 287,
+          "label": "lynx",
+          "display": "lynx",
+          "score": 0.005729419179260731
+        },
+        {
+          "class_id": 793,
+          "label": "shower cap",
+          "display": "shower cap",
+          "score": 0.0017185944598168135
+        }
+      ],
+      "views_agree": true,
+      "needs_review": true,
+      "review_reason": "首选得分低于提示阈值",
+      "elapsed_ms": 392.8,
+      "model_sha": "11ad3fa62ca79e40addfd354a8ec4b7c75143b3038b8d2a807fbc68deab379ca",
+      "model": "ResNet50 / ImageNet-1K V2",
+      "crop": null,
+      "region_size": [
+        451,
+        300
+      ],
+      "scope": "1000 个预定义类别；得分不是正确率，类别外图片也可能得到高分"
+    },
+    {
+      "name": "coffee",
+      "detection": {
+        "items": [
+          {
+            "label": "spoon",
+            "display": "勺子",
+            "class_id": 44,
+            "score": 0.92390376329422,
+            "box": [
+              0.5370338948567709,
+              0.1633027458190918,
+              0.7082284545898437,
+              0.8139991760253906
+            ]
+          },
+          {
+            "label": "cup",
+            "display": "杯子",
+            "class_id": 41,
+            "score": 0.9058526754379272,
+            "box": [
+              0.2864851379394531,
+              0.042243432998657224,
+              0.7037796020507813,
+              0.6967461395263672
+            ]
+          },
+          {
+            "label": "dining table",
+            "display": "餐桌",
+            "class_id": 60,
+            "score": 0.5382950901985168,
+            "box": [
+              0.002530288497606913,
+              0.00455689400434494,
+              0.9783901977539062,
+              0.987602310180664
+            ]
+          }
+        ],
+        "model": "Ultralytics YOLO11s / COCO",
+        "sha256": "85a76fe86dd8afe384648546b56a7a78580c7cb7b404fc595f97969322d502d5",
+        "threshold": 0.35,
+        "iou": 0.7,
+        "input_size": 640,
+        "elapsed_ms": 200.6,
+        "scope": "80 类常见物体；框的位置和类别均可能出错。未检测到不代表图片没有物体。"
+      },
+      "candidates": [
+        {
+          "class_id": 967,
+          "label": "espresso",
+          "display": "浓缩咖啡",
+          "score": 0.5437255501747131
+        },
+        {
+          "class_id": 968,
+          "label": "cup",
+          "display": "杯子",
+          "score": 0.017587054520845413
+        },
+        {
+          "class_id": 504,
+          "label": "coffee mug",
+          "display": "马克杯",
+          "score": 0.0040238588117063046
+        },
+        {
+          "class_id": 925,
+          "label": "consomme",
+          "display": "consomme",
+          "score": 0.0021598152816295624
+        },
+        {
+          "class_id": 960,
+          "label": "chocolate sauce",
+          "display": "chocolate sauce",
+          "score": 0.0018604652723297477
+        }
+      ],
+      "whole_candidates": [
+        {
+          "class_id": 967,
+          "label": "espresso",
+          "display": "浓缩咖啡",
+          "score": 0.5145879983901978
+        },
+        {
+          "class_id": 968,
+          "label": "cup",
+          "display": "杯子",
+          "score": 0.027824146673083305
+        },
+        {
+          "class_id": 504,
+          "label": "coffee mug",
+          "display": "马克杯",
+          "score": 0.004437123890966177
+        },
+        {
+          "class_id": 868,
+          "label": "tray",
+          "display": "tray",
+          "score": 0.003374690655618906
+        },
+        {
+          "class_id": 925,
+          "label": "consomme",
+          "display": "consomme",
+          "score": 0.0032805828377604485
+        }
+      ],
+      "views_agree": true,
+      "needs_review": false,
+      "review_reason": "两种取景首选一致，仍需核对原图",
+      "elapsed_ms": 377.6,
+      "model_sha": "11ad3fa62ca79e40addfd354a8ec4b7c75143b3038b8d2a807fbc68deab379ca",
+      "model": "ResNet50 / ImageNet-1K V2",
+      "crop": null,
+      "region_size": [
+        600,
+        400
+      ],
+      "scope": "1000 个预定义类别；得分不是正确率，类别外图片也可能得到高分"
+    },
+    {
+      "name": "rocket",
+      "detection": {
+        "items": [],
+        "model": "Ultralytics YOLO11s / COCO",
+        "sha256": "85a76fe86dd8afe384648546b56a7a78580c7cb7b404fc595f97969322d502d5",
+        "threshold": 0.35,
+        "iou": 0.7,
+        "input_size": 640,
+        "elapsed_ms": 201.1,
+        "scope": "80 类常见物体；框的位置和类别均可能出错。未检测到不代表图片没有物体。"
+      },
+      "candidates": [
+        {
+          "class_id": 540,
+          "label": "drilling platform",
+          "display": "drilling platform",
+          "score": 0.13071757555007935
+        },
+        {
+          "class_id": 657,
+          "label": "missile",
+          "display": "导弹",
+          "score": 0.12254054099321365
+        },
+        {
+          "class_id": 744,
+          "label": "projectile",
+          "display": "projectile",
+          "score": 0.08295375108718872
+        },
+        {
+          "class_id": 517,
+          "label": "crane",
+          "display": "crane",
+          "score": 0.023535817861557007
+        },
+        {
+          "class_id": 812,
+          "label": "space shuttle",
+          "display": "航天飞机",
+          "score": 0.0052291154861450195
+        }
+      ],
+      "whole_candidates": [
+        {
+          "class_id": 540,
+          "label": "drilling platform",
+          "display": "drilling platform",
+          "score": 0.3380108177661896
+        },
+        {
+          "class_id": 517,
+          "label": "crane",
+          "display": "crane",
+          "score": 0.09659940749406815
+        },
+        {
+          "class_id": 657,
+          "label": "missile",
+          "display": "导弹",
+          "score": 0.03591858223080635
+        },
+        {
+          "class_id": 744,
+          "label": "projectile",
+          "display": "projectile",
+          "score": 0.01949790120124817
+        },
+        {
+          "class_id": 536,
+          "label": "dock",
+          "display": "dock",
+          "score": 0.009819183498620987
+        }
+      ],
+      "views_agree": true,
+      "needs_review": true,
+      "review_reason": "首选得分低于提示阈值",
+      "elapsed_ms": 373.3,
+      "model_sha": "11ad3fa62ca79e40addfd354a8ec4b7c75143b3038b8d2a807fbc68deab379ca",
+      "model": "ResNet50 / ImageNet-1K V2",
+      "crop": null,
+      "region_size": [
+        640,
+        427
+      ],
+      "scope": "1000 个预定义类别；得分不是正确率，类别外图片也可能得到高分"
+    }
+  ]
+}

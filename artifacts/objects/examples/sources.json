@@ -1,0 +1,42 @@
+[
+  {
+    "file": "coffee.png",
+    "source": "https://scikit-image.org/docs/0.24.x/api/skimage.data.html#skimage.data.coffee",
+    "author": "Rachel Michetti, courtesy of Pikolo Espresso Bar",
+    "license": "CC0",
+    "sha256": "bc7c679e93a04b35aef5c5d644f0293d6aac8df7ccbba06f1d5bdddc0285050b",
+    "conversion": "skimage 0.24.0 uint8 array saved as RGB PNG; no generated or retouched content"
+  },
+  {
+    "file": "chelsea.png",
+    "source": "https://scikit-image.org/docs/0.24.x/api/skimage.data.html#skimage.data.chelsea",
+    "author": "Stefan van der Walt",
+    "license": "CC0",
+    "sha256": "adbb6c59da5251983dfca65bd3d055e3d2cb9d49f85af5d473852a9033e42f24",
+    "conversion": "skimage 0.24.0 uint8 array saved as RGB PNG; no generated or retouched content"
+  },
+  {
+    "file": "rocket.png",
+    "source": "https://scikit-image.org/docs/0.24.x/api/skimage.data.html#skimage.data.rocket",
+    "author": "SpaceX, DSCOVR / Falcon 9 launch",
+    "license": "Public domain, per scikit-image documentation",
+    "sha256": "5f73974a1b73af2eaf2d9a60014fc167c0e41d4a13a34ca9bb138126991caf7f",
+    "conversion": "skimage 0.24.0 uint8 array saved as RGB PNG; no generated or retouched content"
+  },
+  {
+    "file": "astronaut.png",
+    "source": "https://scikit-image.org/docs/0.24.x/api/skimage.data.html#skimage.data.astronaut",
+    "author": "NASA, Eileen Collins",
+    "license": "Public domain, per scikit-image documentation",
+    "sha256": "b8c8afe36141c45dd06f55d257d6b951b4c77a1a2c31fe09e78452cdda2dfcd4",
+    "conversion": "skimage 0.24.0 uint8 array saved as RGB PNG; no generated or retouched content"
+  },
+  {
+    "file": "camera.png",
+    "source": "https://scikit-image.org/docs/0.24.x/api/skimage.data.html#skimage.data.camera",
+    "author": "scikit-image bundled cameraman photograph",
+    "license": "See scikit-image data attribution; no separate author/permission claim made here",
+    "sha256": "fe10d880ba2653ffab56ce84355c6161a98deb9bda56417f60eb1879ac6f6753",
+    "conversion": "skimage 0.24.0 uint8 array saved as RGB PNG; no generated or retouched content"
+  }
+]

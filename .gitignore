@@ -7,3 +7,9 @@ tmp/
 
 var/
 artifacts/review/demo-v2/capture/
+
+artifacts/objects/*.pth
+artifacts/objects/demo/capture/
+
+artifacts/objects/*.pt
+artifacts/objects/*.part

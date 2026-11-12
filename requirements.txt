@@ -8,3 +8,6 @@ uvicorn==0.34.0
 httpx==0.28.1
 pillow==11.1.0
 pytest==8.3.4
+torchvision==0.17.2
+ultralytics==8.3.40
+opencv-python==4.10.0.84

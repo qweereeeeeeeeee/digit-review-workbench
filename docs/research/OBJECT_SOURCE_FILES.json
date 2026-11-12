@@ -1,0 +1,29 @@
+{
+  "review_date": "2026-11-12",
+  "files": [
+    {
+      "url": "https://github.com/ultralytics/ultralytics/blob/v8.3.40/ultralytics/models/yolo/detect/predict.py",
+      "blob_sha": "136f988299498e9d1159a6614f4b57895ec3519a"
+    },
+    {
+      "url": "https://github.com/ultralytics/ultralytics/blob/v8.3.40/ultralytics/engine/predictor.py",
+      "blob_sha": "c28e1895d071190ef696d622159d6fdaf1de0389"
+    },
+    {
+      "url": "https://github.com/ultralytics/ultralytics/blob/v8.3.40/ultralytics/data/augment.py",
+      "blob_sha": "5ec011d890aac25056b7758ad616acc98b007d69"
+    },
+    {
+      "url": "https://github.com/ultralytics/ultralytics/blob/v8.3.40/pyproject.toml",
+      "blob_sha": "2545739bab02c1aa4f9650129b802fa4738dd8a3"
+    },
+    {
+      "url": "https://github.com/openai/CLIP/blob/main/clip/clip.py",
+      "blob_sha": "398a6282cc243e449430d91c2562491fc799929d"
+    },
+    {
+      "url": "https://github.com/IDEA-Research/GroundingDINO/blob/main/groundingdino/util/inference.py",
+      "blob_sha": "84a962e9334fcdda8cd94279b476eb27e00eb004"
+    }
+  ]
+}
