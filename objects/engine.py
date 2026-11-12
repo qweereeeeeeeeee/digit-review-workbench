@@ -144,4 +144,4 @@ class ObjectEngine:
                     review_reason='两种取景的首选不同' if not agreement else '首选得分低于提示阈值' if uncertain else '两种取景首选一致，仍需核对原图',
                     elapsed_ms=round((time.perf_counter()-start)*1000,1),model_sha=self.sha,
                     model='ResNet50 / ImageNet-1K V2',crop=crop,region_size=list(image.size),
-                    scope='1000 个预定义类别；得分不是正确率，类别外图片也可能得到高分')
+                    scope=vision['scope'] if vision else '1000 个预定义类别；得分不是正确率，类别外图片也可能得到高分')

@@ -1,0 +1,432 @@
+[
+  {
+    "path": "artifacts/objects/examples/astronaut.png",
+    "image_sha256": "b8c8afe36141c45dd06f55d257d6b951b4c77a1a2c31fe09e78452cdda2dfcd4",
+    "result": {
+      "caption": "A woman in an orange space suit standing next to a space shuttle.",
+      "regions": [
+        {
+          "label": "woman",
+          "display": "女性",
+          "box": [
+            0.03550000116229057,
+            0.029500002041459084,
+            0.7225000262260437,
+            0.9985000491142273
+          ],
+          "score": null,
+          "source": "Florence-2"
+        },
+        {
+          "label": "flag",
+          "display": "旗帜",
+          "box": [
+            0.0005000000237487257,
+            0.0005000000237487257,
+            0.19950000941753387,
+            0.9985000491142273
+          ],
+          "score": null,
+          "source": "Florence-2"
+        },
+        {
+          "label": "helmet",
+          "display": "头盔",
+          "box": [
+            0.5335000157356262,
+            0.671500027179718,
+            0.9985000491142273,
+            0.9985000491142273
+          ],
+          "score": null,
+          "source": "Florence-2"
+        },
+        {
+          "label": "human face",
+          "display": "人脸",
+          "box": [
+            0.3505000174045563,
+            0.1185000091791153,
+            0.5315000414848328,
+            0.34950003027915955
+          ],
+          "score": null,
+          "source": "Florence-2"
+        }
+      ],
+      "texts": [],
+      "raw_caption": {
+        "raw": "</s><s>A woman in an orange space suit standing next to a space shuttle.</s>",
+        "parsed": {
+          "<CAPTION>": "A woman in an orange space suit standing next to a space shuttle."
+        },
+        "token_limit_reached": false
+      },
+      "raw_regions": {
+        "raw": "</s><s>woman<loc_35><loc_29><loc_722><loc_998>flag<loc_0><loc_0><loc_199><loc_998>helmet<loc_533><loc_671><loc_998><loc_998>human face<loc_350><loc_118><loc_531><loc_349></s>",
+        "parsed": {
+          "<DENSE_REGION_CAPTION>": {
+            "bboxes": [
+              [
+                18.176000595092773,
+                15.10400104522705,
+                369.9200134277344,
+                511.2320251464844
+              ],
+              [
+                0.25600001215934753,
+                0.25600001215934753,
+                102.14400482177734,
+                511.2320251464844
+              ],
+              [
+                273.1520080566406,
+                343.8080139160156,
+                511.2320251464844,
+                511.2320251464844
+              ],
+              [
+                179.4560089111328,
+                60.67200469970703,
+                272.1280212402344,
+                178.9440155029297
+              ]
+            ],
+            "labels": [
+              "woman",
+              "flag",
+              "helmet",
+              "human face"
+            ]
+          }
+        },
+        "token_limit_reached": false
+      },
+      "model": "Microsoft Florence-2-base-ft + PaddleOCR PP-OCRv5 server (RapidOCR)",
+      "florence_revision": "f6c1a25888ffc1d945ee8a1a77ac833c7303d46e",
+      "florence_sha": "58757d657ff44051314c8030b68e04cb1bb618ca9a4885418f111f6fb708185a",
+      "ocr_model_hashes": {
+        "ch_PP-OCRv5_server_det.onnx": "0f8846b1d4bba223a2a2f9d9b44022fbc22cc019051a602b41a7fda9667e4cad",
+        "ch_PP-OCRv5_rec_server_infer.onnx": "e09385400eaaaef34ceff54aeb7c4f0f1fe014c27fa8b9905d4709b65746562a",
+        "ch_ppocr_mobile_v2.0_cls_infer.onnx": "e47acedf663230f8863ff1ab0e64dd2d82b838fceb5957146dab185a89d6215c"
+      },
+      "seconds": 19.607,
+      "ocr_seconds": 6.314,
+      "token_limit_reached": false,
+      "scope": "区域识别与文字读取独立执行；生成式描述可能遗漏或说错，不提供虚构准确率。OCR 得分也不保证正确。"
+    },
+    "private": false
+  },
+  {
+    "path": "artifacts/objects/examples/camera.png",
+    "image_sha256": "fe10d880ba2653ffab56ce84355c6161a98deb9bda56417f60eb1879ac6f6753",
+    "result": {
+      "caption": "A man looking through a camera on a tripod.",
+      "regions": [
+        {
+          "label": "man in suit with camera on tripod",
+          "display": "man in suit with camera on tripod",
+          "box": [
+            0.0005000000237487257,
+            0.12650001049041748,
+            0.6485000252723694,
+            0.9985000491142273
+          ],
+          "score": null,
+          "source": "Florence-2"
+        }
+      ],
+      "texts": [],
+      "raw_caption": {
+        "raw": "</s><s>A man looking through a camera on a tripod.</s>",
+        "parsed": {
+          "<CAPTION>": "A man looking through a camera on a tripod."
+        },
+        "token_limit_reached": false
+      },
+      "raw_regions": {
+        "raw": "</s><s>man in suit with camera on tripod<loc_0><loc_126><loc_648><loc_998></s>",
+        "parsed": {
+          "<DENSE_REGION_CAPTION>": {
+            "bboxes": [
+              [
+                0.25600001215934753,
+                64.76800537109375,
+                332.0320129394531,
+                511.2320251464844
+              ]
+            ],
+            "labels": [
+              "man in suit with camera on tripod"
+            ]
+          }
+        },
+        "token_limit_reached": false
+      },
+      "model": "Microsoft Florence-2-base-ft + PaddleOCR PP-OCRv5 server (RapidOCR)",
+      "florence_revision": "f6c1a25888ffc1d945ee8a1a77ac833c7303d46e",
+      "florence_sha": "58757d657ff44051314c8030b68e04cb1bb618ca9a4885418f111f6fb708185a",
+      "ocr_model_hashes": {
+        "ch_PP-OCRv5_server_det.onnx": "0f8846b1d4bba223a2a2f9d9b44022fbc22cc019051a602b41a7fda9667e4cad",
+        "ch_PP-OCRv5_rec_server_infer.onnx": "e09385400eaaaef34ceff54aeb7c4f0f1fe014c27fa8b9905d4709b65746562a",
+        "ch_ppocr_mobile_v2.0_cls_infer.onnx": "e47acedf663230f8863ff1ab0e64dd2d82b838fceb5957146dab185a89d6215c"
+      },
+      "seconds": 16.48,
+      "ocr_seconds": 4.175,
+      "token_limit_reached": false,
+      "scope": "区域识别与文字读取独立执行；生成式描述可能遗漏或说错，不提供虚构准确率。OCR 得分也不保证正确。"
+    },
+    "private": false
+  },
+  {
+    "path": "artifacts/objects/examples/chelsea.png",
+    "image_sha256": "adbb6c59da5251983dfca65bd3d055e3d2cb9d49f85af5d473852a9033e42f24",
+    "result": {
+      "caption": "a close up of a cat with green eyes ",
+      "regions": [
+        {
+          "label": "brown and white cat",
+          "display": "brown and white cat",
+          "box": [
+            0.0005000000055507652,
+            0.0005000000198682149,
+            0.9005000416825457,
+            0.9985000610351562
+          ],
+          "score": null,
+          "source": "Florence-2"
+        }
+      ],
+      "texts": [
+        {
+          "text": "op",
+          "score": 0.60988,
+          "box": [
+            0.20842572062084258,
+            0.16333333333333333,
+            0.8736141906873615,
+            0.7666666666666667
+          ],
+          "quad": [
+            [
+              0.24833702882483372,
+              0.16333333333333333
+            ],
+            [
+              0.8736141906873615,
+              0.2833333333333333
+            ],
+            [
+              0.8337028824833703,
+              0.7666666666666667
+            ],
+            [
+              0.20842572062084258,
+              0.6466666666666666
+            ]
+          ],
+          "source": "PP-OCRv5 server"
+        }
+      ],
+      "raw_caption": {
+        "raw": "</s><s>a close up of a cat with green eyes </s>",
+        "parsed": {
+          "<CAPTION>": "a close up of a cat with green eyes "
+        },
+        "token_limit_reached": false
+      },
+      "raw_regions": {
+        "raw": "</s><s>brown and white cat<loc_0><loc_0><loc_900><loc_998></s>",
+        "parsed": {
+          "<DENSE_REGION_CAPTION>": {
+            "bboxes": [
+              [
+                0.22550000250339508,
+                0.15000000596046448,
+                406.1255187988281,
+                299.5500183105469
+              ]
+            ],
+            "labels": [
+              "brown and white cat"
+            ]
+          }
+        },
+        "token_limit_reached": false
+      },
+      "model": "Microsoft Florence-2-base-ft + PaddleOCR PP-OCRv5 server (RapidOCR)",
+      "florence_revision": "f6c1a25888ffc1d945ee8a1a77ac833c7303d46e",
+      "florence_sha": "58757d657ff44051314c8030b68e04cb1bb618ca9a4885418f111f6fb708185a",
+      "ocr_model_hashes": {
+        "ch_PP-OCRv5_server_det.onnx": "0f8846b1d4bba223a2a2f9d9b44022fbc22cc019051a602b41a7fda9667e4cad",
+        "ch_PP-OCRv5_rec_server_infer.onnx": "e09385400eaaaef34ceff54aeb7c4f0f1fe014c27fa8b9905d4709b65746562a",
+        "ch_ppocr_mobile_v2.0_cls_infer.onnx": "e47acedf663230f8863ff1ab0e64dd2d82b838fceb5957146dab185a89d6215c"
+      },
+      "seconds": 22.831,
+      "ocr_seconds": 9.477,
+      "token_limit_reached": false,
+      "scope": "区域识别与文字读取独立执行；生成式描述可能遗漏或说错，不提供虚构准确率。OCR 得分也不保证正确。"
+    },
+    "private": false
+  },
+  {
+    "path": "artifacts/objects/examples/coffee.png",
+    "image_sha256": "bc7c679e93a04b35aef5c5d644f0293d6aac8df7ccbba06f1d5bdddc0285050b",
+    "result": {
+      "caption": "A cup of coffee on a saucer with a spoon.",
+      "regions": [
+        {
+          "label": "coffee cup",
+          "display": "咖啡杯",
+          "box": [
+            0.285500005086263,
+            0.043499999046325684,
+            0.6845000203450521,
+            0.7745000457763672
+          ],
+          "score": null,
+          "source": "Florence-2"
+        },
+        {
+          "label": "spoon",
+          "display": "勺子",
+          "box": [
+            0.5425,
+            0.16649999618530273,
+            0.7085000101725261,
+            0.816500015258789
+          ],
+          "score": null,
+          "source": "Florence-2"
+        },
+        {
+          "label": "spoon",
+          "display": "勺子",
+          "box": [
+            0.5425,
+            0.4875,
+            0.678500010172526,
+            0.816500015258789
+          ],
+          "score": null,
+          "source": "Florence-2"
+        }
+      ],
+      "texts": [],
+      "raw_caption": {
+        "raw": "</s><s>A cup of coffee on a saucer with a spoon.</s>",
+        "parsed": {
+          "<CAPTION>": "A cup of coffee on a saucer with a spoon."
+        },
+        "token_limit_reached": false
+      },
+      "raw_regions": {
+        "raw": "</s><s>coffee cup<loc_285><loc_43><loc_684><loc_774>spoon<loc_542><loc_166><loc_708><loc_816><loc_542><loc_487><loc_678><loc_816></s>",
+        "parsed": {
+          "<DENSE_REGION_CAPTION>": {
+            "bboxes": [
+              [
+                171.3000030517578,
+                17.399999618530273,
+                410.70001220703125,
+                309.8000183105469
+              ],
+              [
+                325.5,
+                66.5999984741211,
+                425.1000061035156,
+                326.6000061035156
+              ],
+              [
+                325.5,
+                195.0,
+                407.1000061035156,
+                326.6000061035156
+              ]
+            ],
+            "labels": [
+              "coffee cup",
+              "spoon",
+              "spoon"
+            ]
+          }
+        },
+        "token_limit_reached": false
+      },
+      "model": "Microsoft Florence-2-base-ft + PaddleOCR PP-OCRv5 server (RapidOCR)",
+      "florence_revision": "f6c1a25888ffc1d945ee8a1a77ac833c7303d46e",
+      "florence_sha": "58757d657ff44051314c8030b68e04cb1bb618ca9a4885418f111f6fb708185a",
+      "ocr_model_hashes": {
+        "ch_PP-OCRv5_server_det.onnx": "0f8846b1d4bba223a2a2f9d9b44022fbc22cc019051a602b41a7fda9667e4cad",
+        "ch_PP-OCRv5_rec_server_infer.onnx": "e09385400eaaaef34ceff54aeb7c4f0f1fe014c27fa8b9905d4709b65746562a",
+        "ch_ppocr_mobile_v2.0_cls_infer.onnx": "e47acedf663230f8863ff1ab0e64dd2d82b838fceb5957146dab185a89d6215c"
+      },
+      "seconds": 21.76,
+      "ocr_seconds": 8.712,
+      "token_limit_reached": false,
+      "scope": "区域识别与文字读取独立执行；生成式描述可能遗漏或说错，不提供虚构准确率。OCR 得分也不保证正确。"
+    },
+    "private": false
+  },
+  {
+    "path": "artifacts/objects/examples/rocket.png",
+    "image_sha256": "5f73974a1b73af2eaf2d9a60014fc167c0e41d4a13a34ca9bb138126991caf7f",
+    "result": {
+      "caption": "A rocket that is on top of a building.",
+      "regions": [
+        {
+          "label": "rocket",
+          "display": "火箭",
+          "box": [
+            0.4824999809265137,
+            0.2964999982847263,
+            0.5224999904632568,
+            0.9524999971412105
+          ],
+          "score": null,
+          "source": "Florence-2"
+        }
+      ],
+      "texts": [],
+      "raw_caption": {
+        "raw": "</s><s>A rocket that is on top of a building.</s>",
+        "parsed": {
+          "<CAPTION>": "A rocket that is on top of a building."
+        },
+        "token_limit_reached": false
+      },
+      "raw_regions": {
+        "raw": "</s><s>rocket<loc_482><loc_296><loc_522><loc_952></s>",
+        "parsed": {
+          "<DENSE_REGION_CAPTION>": {
+            "bboxes": [
+              [
+                308.79998779296875,
+                126.60549926757812,
+                334.3999938964844,
+                406.7174987792969
+              ]
+            ],
+            "labels": [
+              "rocket"
+            ]
+          }
+        },
+        "token_limit_reached": false
+      },
+      "model": "Microsoft Florence-2-base-ft + PaddleOCR PP-OCRv5 server (RapidOCR)",
+      "florence_revision": "f6c1a25888ffc1d945ee8a1a77ac833c7303d46e",
+      "florence_sha": "58757d657ff44051314c8030b68e04cb1bb618ca9a4885418f111f6fb708185a",
+      "ocr_model_hashes": {
+        "ch_PP-OCRv5_server_det.onnx": "0f8846b1d4bba223a2a2f9d9b44022fbc22cc019051a602b41a7fda9667e4cad",
+        "ch_PP-OCRv5_rec_server_infer.onnx": "e09385400eaaaef34ceff54aeb7c4f0f1fe014c27fa8b9905d4709b65746562a",
+        "ch_ppocr_mobile_v2.0_cls_infer.onnx": "e47acedf663230f8863ff1ab0e64dd2d82b838fceb5957146dab185a89d6215c"
+      },
+      "seconds": 18.872,
+      "ocr_seconds": 6.571,
+      "token_limit_reached": false,
+      "scope": "区域识别与文字读取独立执行；生成式描述可能遗漏或说错，不提供虚构准确率。OCR 得分也不保证正确。"
+    },
+    "private": false
+  }
+]

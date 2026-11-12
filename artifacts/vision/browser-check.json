@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "real_uploads": 7,
+  "page_errors": [],
+  "checks": [
+    "private originals",
+    "rocket region",
+    "multiple regions",
+    "save and reload",
+    "CSV contains provenance",
+    "390px layout"
+  ]
+}
