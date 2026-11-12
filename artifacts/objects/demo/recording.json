@@ -1,0 +1,20 @@
+{
+  "source": "continuous Playwright browser recording, real HTTP API and official checkpoint",
+  "samples": [
+    "coffee",
+    "astronaut",
+    "rocket"
+  ],
+  "generated_images": false,
+  "edited_inference": false,
+  "includes_failures": [
+    "helmet false positive as sports ball",
+    "rocket no detection"
+  ],
+  "duration_seconds": 36.56,
+  "dimensions": [
+    1440,
+    912
+  ],
+  "editing": "Only encoder and removal of 88px empty bottom capture padding; no cuts or altered predictions"
+}

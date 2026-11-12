@@ -37,6 +37,10 @@ sh scripts/start_objects.sh
 
 [开源代码调研与选型](docs/research/OBJECT_PROJECTS.md)说明实际读了什么、采用什么、没做什么。[改造说明](docs/OBJECT_UPGRADE.md)解释旧版在手机照片上的失败原因。
 
+## 运行演示
+
+[新版连续运行视频](artifacts/objects/demo/物体识别演示.mp4)（36.56 秒）展示咖啡照片检测、宇航员照片误报及人工更正、火箭照片未检测到。使用 Playwright 操作真实浏览器，没有替换模型输出。仅裁去录制底部空白；录制脚本为 `scripts/record_objects.py`，依赖 `requirements-demo.txt`。
+
 ## 原考核版本
 
 原手写 PyTorch ResNet、真实训练历史、数字测试结果和视频继续保留，见 [数字版说明](docs/DIGIT_README.md)。旧版入口仍是 `sh scripts/start.sh` / 8766。原来的数字识别视频不能当成本次物体检测演示。
