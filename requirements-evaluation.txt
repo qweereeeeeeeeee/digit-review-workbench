@@ -1,3 +1,5 @@
 -r requirements.txt
 scikit-image==0.24.0
 tifffile==2024.8.30
+easyocr==1.7.2
+opencv-python-headless==4.10.0.84

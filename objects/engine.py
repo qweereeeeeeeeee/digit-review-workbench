@@ -18,6 +18,7 @@ MAX_BYTES = 10 * 1024 * 1024
 
 # English labels remain available so translations never change the model taxonomy.
 ZH = {
+ 'rocket':'火箭','helmet':'头盔','flag':'旗帜','woman':'女性','man':'男性','person':'人','human face':'人脸','coffee cup':'咖啡杯','spoon':'勺子','paper':'纸','white paper':'白纸','notebook':'笔记本',
  'tabby':'虎斑猫', 'tiger cat':'虎斑猫', 'Persian cat':'波斯猫', 'Siamese cat':'暹罗猫', 'Egyptian cat':'埃及猫',
  'golden retriever':'金毛寻回犬', 'Labrador retriever':'拉布拉多犬', 'German shepherd':'德国牧羊犬',
  'Siberian husky':'西伯利亚哈士奇', 'beagle':'比格犬', 'pug':'巴哥犬', 'Chihuahua':'吉娃娃',
@@ -101,7 +102,7 @@ def selected_region(image, crop):
 
 
 class ObjectEngine:
-    def __init__(self):
+    def __init__(self, general=True):
         self.source=json.loads((MODEL_DIR/'model-source.json').read_text())
         path=MODEL_DIR/'resnet50-11ad3fa6.pth'
         self.sha=hashlib.sha256(path.read_bytes()).hexdigest()
@@ -117,6 +118,8 @@ class ObjectEngine:
         self.lock=threading.Lock()
         from .detector import Detector
         self.detector=Detector()
+        from .general import GeneralVision
+        self.general=GeneralVision() if general else None
 
     def candidates(self, probs):
         values,indices=probs.topk(5)
@@ -124,6 +127,7 @@ class ObjectEngine:
 
     def predict(self,image,crop=None):
         start=time.perf_counter()
+        vision=self.general.predict(image,crop) if self.general else None
         detection=self.detector.predict(image,crop)
         image=selected_region(image,crop)
         # Standard center crop and a whole-image padded view are shown separately.
@@ -136,7 +140,7 @@ class ObjectEngine:
         first=self.candidates(probs[0]);second=self.candidates(probs[1])
         agreement=first[0]['class_id']==second[0]['class_id']
         uncertain=not agreement or first[0]['score']<.35
-        return dict(detection=detection,candidates=first,whole_candidates=second,views_agree=agreement,needs_review=uncertain,
+        return dict(vision=vision,detection=detection,candidates=first,whole_candidates=second,views_agree=agreement,needs_review=uncertain,
                     review_reason='两种取景的首选不同' if not agreement else '首选得分低于提示阈值' if uncertain else '两种取景首选一致，仍需核对原图',
                     elapsed_ms=round((time.perf_counter()-start)*1000,1),model_sha=self.sha,
                     model='ResNet50 / ImageNet-1K V2',crop=crop,region_size=list(image.size),

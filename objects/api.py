@@ -54,7 +54,7 @@ def create_app(db_path=None,engine=None):
         app.state.store=Store(db_path or os.environ.get('OBJECT_DB',str(ROOT/'var/objects.sqlite3')))
         app.state.engine=engine or ObjectEngine()
         yield
-    app=FastAPI(title='图片识别与复核',version='3.0.0',lifespan=lifespan)
+    app=FastAPI(title='图片识别与复核',version='4.0.0',lifespan=lifespan)
 
     @app.exception_handler(KeyError)
     async def missing(request,exc):return JSONResponse({'detail':'记录不存在'},status_code=404)
@@ -78,7 +78,7 @@ def create_app(db_path=None,engine=None):
     @app.get('/')
     def index():return FileResponse(ROOT/'objects/web/index.html')
     @app.get('/api/health')
-    def health():return {'status':'ready','model':'ResNet50 ImageNet-1K V2','classes':1000,'detector_classes':80,'sha256':app.state.engine.sha}
+    def health():return {'status':'ready','model':'ResNet50 ImageNet-1K V2','classes':1000,'detector_classes':80,'general_vision':app.state.engine.general is not None,'sha256':app.state.engine.sha}
     @app.get('/api/categories')
     def categories():return [dict(id=i,label=s,display=display_label(s)) for i,s in enumerate(app.state.engine.categories)]
     @app.get('/api/detection-categories')
@@ -113,14 +113,14 @@ def create_app(db_path=None,engine=None):
         return app.state.store.review(record_id,body.version,body.label,body.status,body.note,str(body.request_id))
     @app.get('/api/export')
     def export():
-        fields=['id','name','model_prediction','model_score','whole_view_prediction','needs_review','final_label','status','version','model_sha','crop','digest','detections','detector_sha']
+        fields=['id','name','model_prediction','model_score','whole_view_prediction','needs_review','final_label','status','version','model_sha','crop','digest','detections','detector_sha','vision']
         out=io.StringIO(newline='');writer=csv.DictWriter(out,fieldnames=fields);writer.writeheader()
         for row in app.state.store.export_rows():
             r=row['result'];top=r['candidates'][0]
             flat=dict(id=row['id'],name=row['name'],model_prediction=top['label'],model_score=top['score'],
                       whole_view_prediction=r['whole_candidates'][0]['label'],needs_review=r['needs_review'],
                       final_label=row['final_label'],status=row['status'],version=row['version'],
-                      model_sha=r['model_sha'],crop=json.dumps(r['crop']),digest=row['digest'],detections=json.dumps(r.get('detection',{}).get('items',[]),ensure_ascii=False),detector_sha=r.get('detection',{}).get('sha256',''))
+                      model_sha=r['model_sha'],crop=json.dumps(r['crop']),digest=row['digest'],detections=json.dumps(r.get('detection',{}).get('items',[]),ensure_ascii=False),detector_sha=r.get('detection',{}).get('sha256',''),vision=json.dumps(r.get('vision'),ensure_ascii=False))
             for key,value in flat.items():
                 if isinstance(value,str) and value.lstrip().startswith(('=','+','-','@')):flat[key]="'"+value
             writer.writerow(flat)

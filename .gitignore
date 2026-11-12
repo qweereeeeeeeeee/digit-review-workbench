@@ -13,3 +13,7 @@ artifacts/objects/demo/capture/
 
 artifacts/objects/*.pt
 artifacts/objects/*.part
+
+artifacts/vision/florence/
+artifacts/vision/easyocr/
+artifacts/vision/ppocr/

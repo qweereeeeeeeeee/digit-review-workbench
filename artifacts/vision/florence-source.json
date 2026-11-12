@@ -1,0 +1,62 @@
+{
+  "repo_id": "microsoft/Florence-2-base-ft",
+  "revision": "f6c1a25888ffc1d945ee8a1a77ac833c7303d46e",
+  "license": "MIT",
+  "files": [
+    {
+      "name": "LICENSE",
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+      "bytes": 1141
+    },
+    {
+      "name": "README.md",
+      "sha256": "092b90e814cd6c15f734b15a81e294b4d12c92d12bff3c674a9474ca935ecd1c",
+      "bytes": 14820
+    },
+    {
+      "name": "config.json",
+      "sha256": "c666d0fe0172d46e115e8fba6cd93cd83714575b33a73005cab8d24ce2a3aa8f",
+      "bytes": 2430
+    },
+    {
+      "name": "configuration_florence2.py",
+      "sha256": "653bafddc9651eaff1583a16db4a2bb27d33ec7d541dfab7201aaa4ecaa1cfbf",
+      "bytes": 15125
+    },
+    {
+      "name": "model.safetensors",
+      "sha256": "58757d657ff44051314c8030b68e04cb1bb618ca9a4885418f111f6fb708185a",
+      "bytes": 463221266
+    },
+    {
+      "name": "modeling_florence2.py",
+      "sha256": "5bb7aa72c6ba62e96e1bbae6bc1aaf7b4e8e28cdfc62e670de3d5b67eeab1fdf",
+      "bytes": 127415
+    },
+    {
+      "name": "preprocessor_config.json",
+      "sha256": "2f5921bbc53c7cc04251e1027b45b1cec726276be6db23d1bb40641bfbe2cf29",
+      "bytes": 806
+    },
+    {
+      "name": "processing_florence2.py",
+      "sha256": "4bd7158536cbf1c7891fc8efd94437d79fd09f07f539c7398fab8a885d7d8bca",
+      "bytes": 46372
+    },
+    {
+      "name": "tokenizer.json",
+      "sha256": "847bbeab6174d66a88898f729d52fa8d355fafe1bea101cf960dd404581df70e",
+      "bytes": 1355863
+    },
+    {
+      "name": "tokenizer_config.json",
+      "sha256": "79ffcf43af8ebda99d165f61d243180da2e2639952e41e71e11611c18770489c",
+      "bytes": 34
+    },
+    {
+      "name": "vocab.json",
+      "sha256": "394fdc63c71aabe0a9b97117f5d62fb5fcc4d59b2b3ea929a3929e6a53217b3c",
+      "bytes": 1099884
+    }
+  ]
+}

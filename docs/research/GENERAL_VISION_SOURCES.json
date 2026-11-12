@@ -1,0 +1,17 @@
+{
+  "review_date": "2026-11-12",
+  "files": [
+    {
+      "url": "https://github.com/autodistill/autodistill-florence-2/blob/main/autodistill_florence_2/model.py",
+      "blob_sha": "6faeeda18ec9261ab32daf8aa53a84bdddcfff98"
+    },
+    {
+      "url": "https://github.com/JaidedAI/EasyOCR/blob/master/easyocr/easyocr.py",
+      "blob_sha": "c08fe0388ddcfdd7d027ad68a16fb9079b5e9267"
+    },
+    {
+      "url": "https://github.com/PaddlePaddle/PaddleOCR/blob/v2.9.1/tools/infer/predict_system.py",
+      "blob_sha": "bcb0758eb660d0cefd76977377db9ec4eb09d8b9"
+    }
+  ]
+}

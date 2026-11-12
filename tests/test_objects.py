@@ -14,7 +14,7 @@ from objects.engine import ObjectEngine, decode, selected_region
 ROOT=Path(__file__).resolve().parents[1]
 
 @pytest.fixture(scope='module')
-def engine(): return ObjectEngine()
+def engine(): return ObjectEngine(general=False)
 
 @pytest.fixture
 def client(tmp_path,engine):

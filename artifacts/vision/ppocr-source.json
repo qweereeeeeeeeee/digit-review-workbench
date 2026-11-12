@@ -1,0 +1,32 @@
+{
+  "library": "rapidocr==3.4.1",
+  "upstream": "PaddleOCR PP-OCRv5 server",
+  "license": "Apache-2.0 for model/code; font included from upstream resource",
+  "files": [
+    {
+      "name": "ch_PP-OCRv5_server_det.onnx",
+      "url": "https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v3.4.0/onnx/PP-OCRv5/det/ch_PP-OCRv5_server_det.onnx",
+      "sha256": "0f8846b1d4bba223a2a2f9d9b44022fbc22cc019051a602b41a7fda9667e4cad",
+      "bytes": 88118768
+    },
+    {
+      "name": "ch_PP-OCRv5_rec_server_infer.onnx",
+      "url": "https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v3.4.0/onnx/PP-OCRv5/rec/ch_PP-OCRv5_rec_server_infer.onnx",
+      "sha256": "e09385400eaaaef34ceff54aeb7c4f0f1fe014c27fa8b9905d4709b65746562a",
+      "bytes": 84577022
+    },
+    {
+      "name": "ch_ppocr_mobile_v2.0_cls_infer.onnx",
+      "url": "https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v3.4.0/onnx/PP-OCRv4/cls/ch_ppocr_mobile_v2.0_cls_infer.onnx",
+      "sha256": "e47acedf663230f8863ff1ab0e64dd2d82b838fceb5957146dab185a89d6215c",
+      "bytes": 585532
+    },
+    {
+      "name": "FZYTK.TTF",
+      "url": "https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v3.4.0/resources/fonts/FZYTK.TTF",
+      "sha256": "4065a23df6823c8e2b69a0e76d02f02a6470b8774a5e91086609701ad95cc33f",
+      "bytes": 3241748,
+      "checksum_source": "observed after official download"
+    }
+  ]
+}
