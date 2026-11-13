@@ -35,7 +35,7 @@ def render_markdown(source):
     return '<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>项目说明</title><style>'+STYLE+'</style><body>'+''.join(blocks)+'</body></html>'
 
 
-def prepare(destination, exam):
+def prepare(destination, exam, video):
     destination.mkdir(parents=True, exist_ok=False)
     source = destination/'03_项目源码'
     source.mkdir()
@@ -66,12 +66,18 @@ def prepare(destination, exam):
         weights.append(str(Path('03_项目源码')/relative))
     videos = destination/'02_运行视频'
     videos.mkdir()
-    shutil.copy2(ROOT/'artifacts/vision/demo/新版模型实际运行.mp4', videos/'新版通用识别_实际运行.mp4')
-    shutil.copy2(ROOT/'artifacts/review/demo-v2/运行演示.mp4', videos/'手写ResNet数字版_实际运行.mp4')
-    shutil.copy2(ROOT/'docs/VIDEO.md', videos/'录制说明.md')
+    shutil.copy2(video, videos/'用户现场测试.mov')
+    assert sha(video) == sha(videos/'用户现场测试.mov')
+    (videos/'视频说明.txt').write_text('本目录采用用户提供的原始现场录屏，未剪辑、未配音、未改写画面或识别结果。原文件名：'+video.name+'\n时长与编码检查见 04_考核与验证。画面中的 422 提示保留，不据此声称全部请求成功。早期自动化视频仅随源码作为开发历史材料保留。\n')
     report = (ROOT/'docs/DELIVERY_REPORT.md').read_text()
     (destination/'01_项目说明.md').write_text(report)
     (destination/'01_项目说明.html').write_text(render_markdown(report))
+    writing = destination/'01_文档'
+    writing.mkdir()
+    for original, title in [('DEVELOPMENT_PROCESS.md','开发过程说明'), ('CODE_WALKTHROUGH.md','技术与代码说明')]:
+        content = (ROOT/'docs'/original).read_text()
+        (writing/(title+'.md')).write_text(content)
+        (writing/(title+'.html')).write_text(render_markdown(content))
     checks = destination/'04_考核与验证'
     checks.mkdir()
     shutil.copy2(exam, checks/'第一阶段考核任务.pdf')
@@ -95,7 +101,8 @@ def prepare(destination, exam):
 
 先打开 00_交付导航.html，或双击 01_项目说明.html 阅读完整说明。
 
-02_运行视频：基础手写 ResNet 演示和本次新版实际运行视频。
+01_文档：真实开发过程与技术代码说明，可直接双击 HTML 阅读。
+02_运行视频：用户提供的原始现场录屏，不再制作新视频。
 03_项目源码：代码、依赖、训练数据与结果、测试、模型文件及来源。
 04_考核与验证：原任务 PDF、验收表、本次实际校验结果。
 05_开发历史：本地 Git bundle、提交日志、GitHub 提交快照。
@@ -116,20 +123,21 @@ sh scripts/start_objects.sh
 正式验证环境是 Intel macOS/Python 3.12；没有宣称在 Windows、Apple Silicon 或全新操作系统上完成验证。
 不得把原 UCI 小图测试分数当成手机照片准确率；新版也有漏框、重复框和 OCR 误报。
 历史文档中待补写的个人经历并非已完成证明；当前项目说明的感悟来自真实反馈整理，代码理解仍须本人准备。
-不含用户私有照片、数据库、机器虚拟环境和临时缓存；测试示例均有公开来源。
+不含私有照片原文件、日常数据库、机器虚拟环境和临时缓存；用户明确提供的现场录屏单独作为交付附件，画面原样保留。
 '''
     (destination/'00_先读我.txt').write_text(instructions)
     homepage = '''<h1>灵境1 · 第一阶段交付包</h1><p>图片识别与复核。基础手写 ResNet 与新版物体、文字识别均保留。</p>
 <nav><a href="01_项目说明.html">阅读项目说明与个人感悟</a> · <a href="https://github.com/qweereeeeeeeeee/digit-review-workbench">GitHub 仓库</a> · <a href="http://127.0.0.1:8768/">打开本机测试界面</a></nav>
-<h2>先看运行结果</h2><p>基础版展示数字预测与复核；新版展示火箭、多区域识别及重复框处理。两个视频均来自实际运行，操作自动化、无合成配音。</p>
-<ul><li><a href="02_运行视频/手写ResNet数字版_实际运行.mp4">手写 ResNet 数字版视频</a></li><li><a href="02_运行视频/新版通用识别_实际运行.mp4">新版通用识别视频</a></li></ul>
+<h2>开发过程与技术说明</h2><p>按实际提交和运行证据整理，不补造经历或实验数据。</p>
+<ul><li><a href="01_文档/开发过程说明.html">真实开发时间线、遇到的问题与修改依据</a></li><li><a href="01_文档/技术与代码说明.html">从上传图片开始理解后端与模型</a></li></ul>
+<h2>用户提供的现场视频</h2><p>采用用户原始录屏，未剪辑、未替换结果。视频中也保留请求报错，不能把它描述为全部测试成功。</p><p><a href="02_运行视频/用户现场测试.mov">打开用户现场测试视频</a></p>
 <h2>代码与检查材料</h2><ul><li><a href="03_项目源码/README.md">源码运行说明</a></li><li><a href="04_考核与验证/第一阶段考核任务.pdf">原考核要求</a></li><li><a href="04_考核与验证/验收对应表.md">逐项验收对应表</a></li><li><a href="05_开发历史/本地提交记录.txt">真实开发提交记录</a></li><li><a href="00_先读我.txt">安装步骤与完整文件说明</a></li></ul>
 <h2>第一次在另一台电脑运行</h2><p>进入“03_项目源码”，准备 Python 3.12。完整包带模型，但仍需要安装依赖。精简包需要先按 README 下载模型。</p><pre>python3.12 -m venv .venv
 .venv/bin/python -m pip install -r requirements.txt
 sh scripts/start_objects.sh</pre><p>然后访问 http://127.0.0.1:8768/。这个地址是各自电脑的本地地址，不能当作公网演示网址。</p>
 <h2>结果的边界</h2><p>原 UCI 测试集 267/270 的结果不能代表手机照片。新版仍有误报、遗漏和重复框。所有已报告的失败均保留；本人代码理解需要在答辩中实际展示。</p>'''
     (destination/'00_交付导航.html').write_text('<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>灵境1 交付导航</title><style>'+STYLE+'</style><body>'+homepage+'</body></html>')
-    (destination/'打包来源.json').write_text(json.dumps({'local_commit': subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(), 'large_model_paths': weights, 'private_data_included': False},ensure_ascii=False,indent=2)+'\n')
+    (destination/'打包来源.json').write_text(json.dumps({'local_commit': subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(), 'large_model_paths': weights, 'private_databases_and_raw_photo_files_included': False, 'user_video': {'original_filename':video.name,'sha256':sha(video),'bytes':video.stat().st_size,'modified':False}},ensure_ascii=False,indent=2)+'\n')
     print(destination)
 
 
@@ -168,9 +176,11 @@ if __name__ == '__main__':
     parser.add_argument('action', choices=['prepare', 'seal'])
     parser.add_argument('--output', type=Path, required=True)
     parser.add_argument('--exam', type=Path)
+    parser.add_argument('--video', type=Path)
     args = parser.parse_args()
     if args.action == 'prepare':
         if not args.exam or not args.exam.is_file(): parser.error('prepare 需要有效的 --exam PDF 路径')
-        prepare(args.output, args.exam)
+        if not args.video or not args.video.is_file(): parser.error('prepare 需要用户提供的 --video 原始视频路径')
+        prepare(args.output, args.exam, args.video)
     else:
         seal(args.output)

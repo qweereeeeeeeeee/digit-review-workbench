@@ -11,7 +11,7 @@
 | 迁移学习与模型复用 | objects/general.py、模型来源清单 | 复用官方预训练模型，未宣称自行微调这些大模型 |
 | 仓库与持续历史 | https://github.com/qweereeeeeeeeee/digit-review-workbench；交付包 05_开发历史/ | 实际本地和远程阶段提交；首版只有本地历史的事实不改写 |
 | 文档与个人感悟 | docs/DELIVERY_REPORT.md；交付包 01_项目说明.html | 感悟基于实际测试反馈整理，不虚构独立编码经历 |
-| 运行视频 | artifacts/review/demo-v2/运行演示.mp4；artifacts/vision/demo/新版模型实际运行.mp4 | 基础数字版与新版拓展分别展示，均为真实运行录制 |
+| 运行视频 | 交付包 02_运行视频/用户现场测试.mov | 采用用户提供的原始视频；早期自动化视频在源码中作为历史保留 |
 | 参考与创新 | docs/research/、docs/DELIVERY_REPORT.md | 成熟模型与复核、来源校验、版本冲突等工程组合，不冒充原创算法 |
 | AI 辅助与代码理解 | 明确披露 AI 辅助；docs/DEFENSE.md；验证脚本 | 本人理解仍须通过讲解和修改展示，不能由打包保证 |
 | 结果、仓库链接、说明一并打包 | 交付包首页、源码、视频、模型、历史 | 本次整理交付包，由提交者交给考核指定联系人 |

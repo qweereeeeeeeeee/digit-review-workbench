@@ -43,7 +43,9 @@ sh scripts/start_objects.sh
 
 ## 运行演示
 
-[上一版 YOLO 运行视频](artifacts/objects/demo/物体识别演示.mp4)（36.56 秒）保留当时的误报和火箭未检测到结果；它不是当前 Florence-2 + OCR 的演示。本次打包另附 [新版连续运行视频](artifacts/vision/demo/新版模型实际运行.mp4)，展示火箭、多区域识别、重复框和人工复核保存，使用真实推理并保留等待时间。
+[上一版 YOLO 运行视频](artifacts/objects/demo/物体识别演示.mp4)（36.56 秒）保留当时的误报和火箭未检测到结果；它不是当前 Florence-2 + OCR 的演示。[新版自动化验证视频](artifacts/vision/demo/新版模型实际运行.mp4)保留开发过程；最终提交使用用户提供的原始现场录屏，只随本地交付包提供。
+
+开发时间线见 [开发过程说明](docs/DEVELOPMENT_PROCESS.md)，基础讲解见 [技术与代码说明](docs/CODE_WALKTHROUGH.md)。
 
 最新完整说明与个人感悟见 [交付说明](docs/DELIVERY_REPORT.md)，考核逐项对应见 [验收表](docs/ACCEPTANCE.md)。
 

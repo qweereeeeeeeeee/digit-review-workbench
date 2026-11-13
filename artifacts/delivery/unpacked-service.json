@@ -1,0 +1,162 @@
+{
+  "status": "passed",
+  "test": "Archive extracted into a different directory; server loaded extracted models and processed the public rocket photograph.",
+  "environment": "Existing Intel macOS Python 3.12 dependencies reused; this is not a clean-OS installation test.",
+  "health": {
+    "status": "ready",
+    "model": "ResNet50 ImageNet-1K V2",
+    "classes": 1000,
+    "detector_classes": 80,
+    "general_vision": true,
+    "sha256": "11ad3fa62ca79e40addfd354a8ec4b7c75143b3038b8d2a807fbc68deab379ca"
+  },
+  "result": {
+    "vision": {
+      "caption": "A rocket that is on top of a building.",
+      "regions": [
+        {
+          "label": "rocket",
+          "display": "火箭",
+          "box": [
+            0.4824999809265137,
+            0.2964999982847263,
+            0.5224999904632568,
+            0.9524999971412105
+          ],
+          "score": null,
+          "source": "Florence-2"
+        }
+      ],
+      "texts": [],
+      "raw_caption": {
+        "raw": "</s><s>A rocket that is on top of a building.</s>",
+        "parsed": {
+          "<CAPTION>": "A rocket that is on top of a building."
+        },
+        "token_limit_reached": false
+      },
+      "raw_regions": {
+        "raw": "</s><s>rocket<loc_482><loc_296><loc_522><loc_952></s>",
+        "parsed": {
+          "<DENSE_REGION_CAPTION>": {
+            "bboxes": [
+              [
+                308.79998779296875,
+                126.60549926757812,
+                334.3999938964844,
+                406.7174987792969
+              ]
+            ],
+            "labels": [
+              "rocket"
+            ]
+          }
+        },
+        "token_limit_reached": false
+      },
+      "model": "Microsoft Florence-2-base-ft + PaddleOCR PP-OCRv5 server (RapidOCR)",
+      "florence_revision": "f6c1a25888ffc1d945ee8a1a77ac833c7303d46e",
+      "florence_sha": "58757d657ff44051314c8030b68e04cb1bb618ca9a4885418f111f6fb708185a",
+      "ocr_model_hashes": {
+        "ch_PP-OCRv5_server_det.onnx": "0f8846b1d4bba223a2a2f9d9b44022fbc22cc019051a602b41a7fda9667e4cad",
+        "ch_PP-OCRv5_rec_server_infer.onnx": "e09385400eaaaef34ceff54aeb7c4f0f1fe014c27fa8b9905d4709b65746562a",
+        "ch_ppocr_mobile_v2.0_cls_infer.onnx": "e47acedf663230f8863ff1ab0e64dd2d82b838fceb5957146dab185a89d6215c"
+      },
+      "seconds": 21.937,
+      "ocr_seconds": 8.902,
+      "token_limit_reached": false,
+      "scope": "区域识别与文字读取独立执行；生成式描述可能遗漏或说错，不提供虚构准确率。OCR 得分也不保证正确。"
+    },
+    "detection": {
+      "items": [],
+      "model": "Ultralytics YOLO11s / COCO",
+      "sha256": "85a76fe86dd8afe384648546b56a7a78580c7cb7b404fc595f97969322d502d5",
+      "threshold": 0.35,
+      "iou": 0.7,
+      "input_size": 640,
+      "elapsed_ms": 1992.2,
+      "scope": "80 类常见物体；框的位置和类别均可能出错。未检测到不代表图片没有物体。"
+    },
+    "candidates": [
+      {
+        "class_id": 540,
+        "label": "drilling platform",
+        "display": "drilling platform",
+        "score": 0.13071757555007935
+      },
+      {
+        "class_id": 657,
+        "label": "missile",
+        "display": "导弹",
+        "score": 0.12254054099321365
+      },
+      {
+        "class_id": 744,
+        "label": "projectile",
+        "display": "projectile",
+        "score": 0.08295375108718872
+      },
+      {
+        "class_id": 517,
+        "label": "crane",
+        "display": "crane",
+        "score": 0.023535817861557007
+      },
+      {
+        "class_id": 812,
+        "label": "space shuttle",
+        "display": "航天飞机",
+        "score": 0.0052291154861450195
+      }
+    ],
+    "whole_candidates": [
+      {
+        "class_id": 540,
+        "label": "drilling platform",
+        "display": "drilling platform",
+        "score": 0.3380108177661896
+      },
+      {
+        "class_id": 517,
+        "label": "crane",
+        "display": "crane",
+        "score": 0.09659940749406815
+      },
+      {
+        "class_id": 657,
+        "label": "missile",
+        "display": "导弹",
+        "score": 0.03591858223080635
+      },
+      {
+        "class_id": 744,
+        "label": "projectile",
+        "display": "projectile",
+        "score": 0.01949790120124817
+      },
+      {
+        "class_id": 536,
+        "label": "dock",
+        "display": "dock",
+        "score": 0.009819183498620987
+      }
+    ],
+    "views_agree": true,
+    "needs_review": true,
+    "review_reason": "首选得分低于提示阈值",
+    "elapsed_ms": 24153.5,
+    "model_sha": "11ad3fa62ca79e40addfd354a8ec4b7c75143b3038b8d2a807fbc68deab379ca",
+    "model": "ResNet50 / ImageNet-1K V2",
+    "crop": null,
+    "region_size": [
+      640,
+      427
+    ],
+    "scope": "区域识别与文字读取独立执行；生成式描述可能遗漏或说错，不提供虚构准确率。OCR 得分也不保证正确。",
+    "original_size": [
+      640,
+      427
+    ]
+  },
+  "runtime_sources_match_current_checkout": true
+}
